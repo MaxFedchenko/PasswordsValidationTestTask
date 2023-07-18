@@ -22,9 +22,9 @@ namespace PasswordsValidationTestTask
                     services.AddSingleton<IPasswordStringsProviderService, PasswordStringsProviderService>();
                     services.AddSingleton<IPasswordStringValidator, PasswordStringValidator>();
                     services.AddSingleton<MainViewModel>();
-                    services.AddSingleton<App>();
-                    services.AddSingleton<MainWindow>(serv => 
+                    services.AddSingleton<MainWindow>(serv =>
                         new MainWindow { DataContext = serv.GetRequiredService<MainViewModel>() });
+                    services.AddSingleton<App>();
                 })
                 .Build();
 

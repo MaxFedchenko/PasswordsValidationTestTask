@@ -17,13 +17,13 @@
         </Grid.RowDefinitions>
 
         <ListBox Grid.RowSpan="2"
-                 ItemsSource="{Binding Path=PasswordsInfo}">
+                 ItemsSource="{Binding PasswordsInfo}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Margin="5"
                                FontSize="18">
-                        <TextBlock Text="{Binding Path=PwdString}" /> 
-                        <TextBlock Text="{Binding Path=PwdState}" Foreground="{Binding Path=Color}"/>
+                        <TextBlock Text="{Binding PwdString}" /> 
+                        <TextBlock Text="{Binding PwdState}" Foreground="{Binding Color}"/>
                     </TextBlock>
                 </DataTemplate>
             </ListBox.ItemTemplate>

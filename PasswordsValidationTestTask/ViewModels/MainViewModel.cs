@@ -43,9 +43,12 @@ namespace PasswordsValidationTestTask.ViewModels
 
         private void OpenFile(object? obj) 
         {
+            var strs = pwdStrProvService.GetStrings();
+
+            if (strs is null) return;
+
             PasswordsInfo.Clear();
             int valid_passwords = 0;
-            var strs = pwdStrProvService.GetStrings();
 
             foreach (var str in strs) 
             {
