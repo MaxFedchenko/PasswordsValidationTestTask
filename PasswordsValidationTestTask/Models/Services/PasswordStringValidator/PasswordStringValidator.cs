@@ -9,7 +9,7 @@ namespace PasswordsValidationTestTask.Models.Services
 {
     class PasswordStringValidator : IPasswordStringValidator
     {
-        private static readonly Regex regex = new Regex("^(.) (\\d*)-(\\d*): (.*)");
+        private static readonly Regex regex = new Regex("^(.) (\\d+)-(\\d+): (.*)$");
 
         public bool? Validate(string passwordStr)
         {
